@@ -21,8 +21,15 @@ export default async function Home() {
         </div>
 
         <div className="mt-8">
+          <p className="font-bold uppercase pl-5 mb-3">
+            Ofertas
+          </p>
           <ProductList products={deals} />
         </div>
+
+        {/* Banner Home 02 */}
+
+        <Image src="/banner-home-02.png" alt="Banner rotativo" height={0} width={0} className="px-5 h-auto w-full" sizes="100vw" />
       </div >
     </>
   )
