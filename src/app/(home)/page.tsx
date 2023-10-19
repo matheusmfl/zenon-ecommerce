@@ -29,7 +29,7 @@ export default async function Home() {
   })
   return (
     <>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 py-8">
         <Image src="/banner-home-01.png" alt="Banner rotativo" height={0} width={0} className="px-5 h-auto w-full" sizes="100vw" />
 
         <div className="mt-8 px-5">
