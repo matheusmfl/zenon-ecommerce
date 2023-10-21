@@ -28,7 +28,7 @@ export function ProductDetails({ product: { basePrice, description, discountPerc
   }
 
   return (
-    <div className="flex flex-col px-5 pb-5">
+    <div className="flex flex-col px-5">
       <h2 className="text-lg">{name}</h2>
 
       <div className="flex items-center gap-2">

@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Categories } from "./components/categories"
 import { prismaClient } from "@/lib/prisma"
 import { ProductList } from "./components/productList"
+import { SectionTitle } from "@/components/ui/sectionTitle"
 
 export default async function Home() {
   const deals = await prismaClient.product.findMany({
@@ -48,9 +49,9 @@ export default async function Home() {
         <Image src="/banner-home-02.png" alt="Banner rotativo" height={0} width={0} className="px-5 h-auto w-full" sizes="100vw" />
 
         <div >
-          <p className="font-bold uppercase pl-5 mb-3">
+          <SectionTitle>
             Teclados
-          </p>
+          </SectionTitle>
           <ProductList products={keyboards} />
         </div>
 
@@ -60,9 +61,9 @@ export default async function Home() {
         <Image src="/banner-home-03.png" alt="Banner rotativo" height={0} width={0} className="px-5 h-auto w-full" sizes="100vw" />
 
         <div >
-          <p className="font-bold uppercase pl-5 mb-3">
+          <SectionTitle>
             Mouses
-          </p>
+          </SectionTitle>
           <ProductList products={mouses} />
         </div>
       </div >
