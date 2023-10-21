@@ -33,7 +33,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       <h2 className="text-lg">{product.name}</h2>
 
       <div className="flex items-center gap-2">
-        <h1 className="text-xl font-bold">R$ {product.totalPrice.toFixed(2)}</h1>
+        <h1 className="text-xl font-bold">R$ {Number(product.totalPrice).toFixed(2)}</h1>
         {product.discountPercentage > 0 && (
           <Badge className="px-2 py-[2px]">
             <ArrowDownIcon size={12} /> {product.discountPercentage}%

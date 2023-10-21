@@ -4,6 +4,7 @@ import { Badge } from "./badge";
 import { ArrowDownIcon } from "lucide-react";
 import Link from "next/link";
 
+
 interface ProductItemProps {
   product: ProductWithTotalPrice
 }
@@ -35,7 +36,7 @@ export function ProductItem({ product }: ProductItemProps) {
 
               <>
                 <p className="font-semibold overflow-hidden whitespace-nowrap text-ellipsis w-full">
-                  {product.totalPrice.toFixed(2)}
+                  {Number(product.totalPrice).toFixed(2)}
                 </p>
 
                 <p className="opacity-75 line-through text-xs overflow-hidden whitespace-nowrap text-ellipsis w-full">
@@ -46,7 +47,7 @@ export function ProductItem({ product }: ProductItemProps) {
 
             {product.discountPercentage === 0 && (
               <p className="font-semibold text-sm">
-                {product.totalPrice.toFixed(2)}
+                {Number(product.totalPrice).toFixed(2)}
               </p>
             )}
           </div>
