@@ -8,6 +8,7 @@ import { Avatar, AvatarImage } from "./avatar";
 import { AvatarFallback } from "@radix-ui/react-avatar";
 import { Separator } from "./separator";
 import Link from "next/link";
+import Cart from "./cart";
 
 export function Header() {
   const { status, data } = useSession()
@@ -112,9 +113,18 @@ export function Header() {
         </Link>
 
 
-        <Button size={"icon"} variant={"outline"}>
-          <ShoppingCartIcon />
-        </Button>
+        {/* Cart Div */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button size={"icon"} variant={"outline"}>
+              <ShoppingCartIcon />
+            </Button>
+          </SheetTrigger>
+
+          <SheetContent>
+            <Cart />
+          </SheetContent>
+        </Sheet>
 
       </Card>
 
