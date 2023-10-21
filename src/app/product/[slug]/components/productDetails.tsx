@@ -72,7 +72,7 @@ export function ProductDetails({ product: { basePrice, description, discountPerc
 
       {/* Div Entrega */}
 
-      <div className="bg-accent flex items-center px-5 py-2 justify-between mt-5">
+      <div className="bg-accent flex items-center px-5 py-2 justify-between mt-5 rounded-lg">
         <div className="items-center flex gap-2">
           <TruckIcon size={16} />
           <div className="flex flex-col">
