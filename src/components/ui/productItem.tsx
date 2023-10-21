@@ -9,9 +9,9 @@ interface ProductItemProps {
 
 export function ProductItem({ product }: ProductItemProps) {
   return (
-    <div className="flex flex-col gap-4 w-[170px]">
+    <div className="flex flex-col gap-4">
       {/* img div */}
-      <div className="relative bg-accent rounded-[10px] h-[170px] w-[170px]  flex items-center justify-center ">
+      <div className="relative bg-accent rounded-[10px] h-[170px] flex items-center justify-center ">
         <Image src={product.imageUrls[0]} alt="Img generic" width={0} height={0} sizes={"100vw"}
           className="h-auto w-auto object-contain max-w-[80%] max-h-[70%]" />
 
