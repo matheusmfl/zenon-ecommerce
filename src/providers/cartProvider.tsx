@@ -55,24 +55,29 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
   const totalDiscount = total - subTotal
 
   function handleAddProductToCart(product: CartProduct) {
-    const productIdAlreadyOnCart = products.some(cartProduct => cartProduct.id === cartProduct.id)
+    // se o produto já estiver no carrinho, apenas aumente a sua quantidade
+    const productIsAlreadyOnCart = products.some(
+      (cartProduct) => cartProduct.id === product.id,
+    );
 
-    if (productIdAlreadyOnCart) {
+    if (productIsAlreadyOnCart) {
       setProducts((prev) =>
         prev.map((cartProduct) => {
           if (cartProduct.id === product.id) {
             return {
               ...cartProduct,
-              quantity: cartProduct.quantity + product.quantity
-            }
+              quantity: cartProduct.quantity + product.quantity,
+            };
           }
-          return cartProduct
-        })
-      )
-      return
+
+          return cartProduct;
+        }),
+      );
+
+      return;
     }
     setProducts((prev) => [...prev, product]);
-
+    console.log(product)
   }
 
 

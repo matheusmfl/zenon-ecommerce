@@ -5,27 +5,33 @@ import { CartContext } from "@/providers/cartProvider";
 import CartItem from "./cartItem";
 import { computeProductTotalPrice } from "@/helpers/product";
 import { Separator } from "./separator";
+import { ScrollArea } from "./scroll-area";
+import { Button } from "./button";
 
 const Cart = () => {
   const { products, total, totalDiscount, subTotal } = useContext(CartContext)
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 h-full">
       <Badge className="gap-1 w-fit text-base uppercase border-primary border-2 py-[0.375rem] px-3" variant={"outline"}>
         <ShoppingCartIcon size={16} />
         Carrinho
       </Badge>
 
       {/* Render Products */}
-      <div className="flex flex-col gap-5">
-        {products.length > 0 ? (products.map((product) => {
-          return (
+      <div className="flex flex-col max-h-full overflow-hidden">
+        <ScrollArea className="h-full">
+          <div className="flex h-full flex-col gap-5">
+            {products.length > 0 ? (products.map((product) => {
+              return (
 
-            <CartItem key={product.id} product={computeProductTotalPrice(product as any) as any} />
+                <CartItem key={product.id} product={computeProductTotalPrice(product as any) as any} />
 
-          )
-        })) : (
-          <p className="text-center font-semibold">Você ainda não adicionou um produto ao carrinho</p>
-        )}
+              )
+            })) : (
+              <p className="text-center font-semibold">Você ainda não adicionou um produto ao carrinho</p>
+            )}
+          </div>
+        </ScrollArea>
       </div>
 
       {/* Div prices */}
@@ -33,7 +39,7 @@ const Cart = () => {
 
         <Separator />
         {/* Div total */}
-        <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center justify-between text-xs ">
           <p>Preço sem desconto:</p>
           <p>R$ {total.toFixed(2)}</p>
         </div>
@@ -57,6 +63,8 @@ const Cart = () => {
           <p>Total:</p>
           <p>R$ {subTotal.toFixed(2)}</p>
         </div>
+
+        <Button className="uppercase font-bold mt-7">Finalizar compra</Button>
       </div>
 
 
