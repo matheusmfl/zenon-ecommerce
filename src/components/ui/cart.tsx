@@ -7,9 +7,24 @@ import { computeProductTotalPrice } from "@/helpers/product";
 import { Separator } from "./separator";
 import { ScrollArea } from "./scroll-area";
 import { Button } from "./button";
+import { createCheckout } from "@/actions/checkout";
+import { loadStripe } from '@stripe/stripe-js'
 
 const Cart = () => {
   const { products, total, totalDiscount, subTotal } = useContext(CartContext)
+
+  async function handleFinishedPurchaseClick() {
+    const checkout = await createCheckout(products)
+
+    const stripe = await loadStripe(
+      process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY
+    )
+
+    stripe?.redirectToCheckout({
+      sessionId: checkout.id
+    })
+  }
+
   return (
     <div className="flex flex-col gap-8 h-full">
       <Badge className="gap-1 w-fit text-base uppercase border-primary border-2 py-[0.375rem] px-3" variant={"outline"}>
@@ -64,7 +79,7 @@ const Cart = () => {
           <p>R$ {subTotal.toFixed(2)}</p>
         </div>
 
-        <Button className="uppercase font-bold mt-7">Finalizar compra</Button>
+        <Button className="uppercase font-bold mt-7" onClick={handleFinishedPurchaseClick}>Finalizar compra</Button>
       </div>
 
 
