@@ -73,10 +73,17 @@ export function Header() {
               )}
 
               {/* Button Home */}
-              <Button variant={"outline"} className="w-full justify-start gap-2">
-                <HomeIcon size={16} />
-                Início
-              </Button>
+              <SheetClose asChild>
+                <Link href={"/"}>
+                  <Button variant={"outline"} className="w-full justify-start gap-2">
+                    <HomeIcon size={16} />
+                    Início
+                  </Button>
+                </Link>
+
+              </SheetClose>
+
+
               {/* Button Ofertas */}
 
               <Button variant={"outline"} className="w-full justify-start gap-2">
