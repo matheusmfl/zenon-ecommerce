@@ -80,16 +80,20 @@ export function Header() {
                     Início
                   </Button>
                 </Link>
-
               </SheetClose>
 
 
               {/* Button Ofertas */}
 
-              <Button variant={"outline"} className="w-full justify-start gap-2">
-                <PercentIcon size={16} />
-                Ofertas
-              </Button>
+              <SheetClose asChild>
+                <Link href={'/deals'}>
+                  <Button variant={"outline"} className="w-full justify-start gap-2">
+                    <PercentIcon size={16} />
+                    Ofertas
+                  </Button>
+                </Link>
+              </SheetClose>
+
               {/* Button Catalogo */}
 
               <SheetClose asChild>
