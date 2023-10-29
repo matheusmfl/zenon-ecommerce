@@ -3,7 +3,7 @@
 import { CartProduct } from "@/providers/cartProvider";
 import Stripe from 'stripe'
 
-export async function createCheckout(products: CartProduct[]) {
+export async function createCheckout(products: CartProduct[], orderId: string) {
 
   // Create Checkout
 
@@ -22,6 +22,9 @@ export async function createCheckout(products: CartProduct[]) {
     mode: 'payment',
     success_url: 'http://localhost:3000',
     cancel_url: 'http://localhost:3000',
+    metadata: {
+      orderId
+    },
 
     line_items: products.map(product => {
       return {
