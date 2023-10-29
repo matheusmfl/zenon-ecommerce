@@ -45,6 +45,7 @@ model OrderProduct {
   Order              Order   @relation(fields: [orderId], references: [id])
   orderId            String
   quantity           Int     @default(0)
+  teste              Int
 }
 
 model Order {
