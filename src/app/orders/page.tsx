@@ -20,12 +20,16 @@ export default async function OrderPage() {
       userId: (user as any).id
     },
     include: {
-      orderProducts: true
+      orderProducts: {
+        include: {
+          product: true
+        }
+      }
     }
   })
   return (
     <div>
-      <div className="p-5">
+      <div className="p-5 flex flex-col gap-4">
         <Badge className="gap-1 w-fit text-base uppercase border-primary border-2 py-[0.375rem] px-3" variant={"outline"}>
           <PackageSearchIcon size={16} />
           Meus pedidos
