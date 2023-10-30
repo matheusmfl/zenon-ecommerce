@@ -6,6 +6,7 @@ import { OrderProductItem } from "./OrderProductItem"
 import { Separator } from "@/components/ui/separator"
 import { useMemo } from "react"
 import { computeProductTotalPrice } from "@/helpers/product"
+import { getOrderStatus } from "@/helpers/orders"
 
 interface OrderItemProps {
   order: Prisma.OrderGetPayload<{
@@ -50,7 +51,7 @@ export function OrderItem({ order }: OrderItemProps) {
                 <div className="flex flex-col font-bold ">
                   <span>Status: </span>
                   <span className="text-[#8162FF]">
-                    {order.status}
+                    {getOrderStatus(order.status)}
                   </span>
                 </div>
 
