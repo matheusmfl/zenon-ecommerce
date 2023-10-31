@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-30T18:50:00.000Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" etag="LmrLdEy51ZPx0w2DXP9-" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-31T01:31:11.661Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" etag="r1BfVgHRSZTK7WkhSDj0" version="22.0.8" type="github">
   <diagram name="Page-1" id="cDsunucB_NZhJvVMvVQH">
-    <mxGraphModel dx="969" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1163" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,7 +21,7 @@
             <mxPoint x="570" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8_1tIbemyQzdMz1QvRVc-2" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Produção&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="8_1tIbemyQzdMz1QvRVc-2" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Produção&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="520" y="90" width="100" height="157.5" as="geometry" />
         </mxCell>
         <mxCell id="8_1tIbemyQzdMz1QvRVc-5" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;CPF: String&lt;br&gt;Nome: String&lt;br&gt;Data da ligação: Date&lt;br&gt;Nome do produto: String&lt;br&gt;Indicação: String&lt;br&gt;Observação: String&lt;br&gt;Previsão: Date(Mês)&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
@@ -33,7 +33,7 @@
         <mxCell id="8_1tIbemyQzdMz1QvRVc-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Comissionamento: String&lt;br&gt;Corretor: Corretor(List)&lt;br&gt;Produto: String&lt;br&gt;Prêmio: String&lt;br&gt;Data Vigência: Date&lt;br&gt;CPF: String&lt;br&gt;Name: String&lt;br&gt;Seguradora: Enum&lt;br&gt;Observações?: String&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="8_1tIbemyQzdMz1QvRVc-7">
           <mxGeometry x="10" y="20" width="180" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="8_1tIbemyQzdMz1QvRVc-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.044;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8_1tIbemyQzdMz1QvRVc-7" target="8_1tIbemyQzdMz1QvRVc-7">
+        <mxCell id="8_1tIbemyQzdMz1QvRVc-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.044;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="8_1tIbemyQzdMz1QvRVc-7" target="8_1tIbemyQzdMz1QvRVc-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
